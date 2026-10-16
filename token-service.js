@@ -28,7 +28,6 @@ const keyFor = (id) => "token:" + id;
  * @param {number} ttlSeconds   Seconds until the token expires.
  * @returns {Promise<string>}   The token id to hand to the user.
  */
-const tokenId = crypto.randomBytes(16).toString("hex");
 
 export async function issueToken(payload, ttlSeconds) {
   const tokenId = crypto.randomBytes(16).toString("hex");
